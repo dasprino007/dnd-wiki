@@ -1,13 +1,11 @@
 .infocard{
-    @apply bg-mantle backdrop-blur-0 flex flex-col align-middle;
-    width: 200px;
+    @apply bg-mantle backdrop-blur-0 flex flex-col;
     width: fit-content;
     border-radius: 5px;
     padding: 20px;
 }
-
 .atributes{
-    @apply flex flex-row gap-2;
+    @apply flex flex-row gap-2 my-1;
 }
 
 .atributes p{
@@ -15,7 +13,7 @@
 }
 
 .thumbnail{
-    width: 170px;
+    width: 200px;
     height: auto;
     border-radius: 5px;
 }

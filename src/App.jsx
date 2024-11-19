@@ -17,7 +17,15 @@ function App() {
     <section className='flex flex-row gap-3'>
       <div className='text-test'>
         <h1>{monster.name}</h1>
-        <h2>proficiencias</h2>
+        <h2>Ações</h2>
+          {monster?.actions?.map(data => {
+            if(data?.damage == undefined)
+            return (
+            <>
+              <h3>{data.name}</h3>
+              <p>{data.desc}</p>
+            </>)
+          })}
       </div>
       <figure className='infocard'>
       <div>
@@ -53,6 +61,7 @@ function App() {
           </li>
         </ul>
       <div>
+          <h3>tamanho: {monster.size}</h3>
           <h3>Armor class: {monster?.armor_class?.map(armor => `${armor.value}, ${armor.type}`)}</h3>
           <h3>Hitpoints: <span>{monster.hit_points}</span></h3>
           <h3>Dado de dano: <span>{monster.hit_dice}</span></h3>
