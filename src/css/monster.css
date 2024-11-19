@@ -1,0 +1,25 @@
+.infocard{
+    @apply bg-mantle backdrop-blur-0 flex flex-col align-middle;
+    width: 200px;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.atributes{
+    @apply flex flex-row gap-2;
+}
+
+.atributes p{
+    @apply font-medium
+}
+
+.thumbnail{
+    width: 170px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.text-test{
+    width: 100%;
+}

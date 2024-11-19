@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --main-width: 60vw;
+  --asside-width: 20vw;
+}
+
+body{
+  /* fonte temporaria */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: theme(colors.base);
+  color: theme(colors.text-color);
+}
+
+main{
+  display: grid;
+  grid-template-columns: var(--asside-width) var(--main-width) var(--asside-width);
+  padding: 32px;
+}
+
+h3, h4, h5, h6{
+  @apply font-semibold
+}
+
+h1{
+  display: inline-block;
+  @apply text-2xl font-extrabold mb-2
+}
+
+h2{
+  @apply text-xl font-bold
+}
+
+span{
+  color: theme(colors.redish);
+}
+
+.subtext{
+  color: theme(colors.subtext-color);
+  @apply text-sm
+}
