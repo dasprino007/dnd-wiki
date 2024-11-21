@@ -5,13 +5,27 @@
 :root{
   --main-width: 75vw;
   --asside-width: 15vw;
+  --colorBase: theme(colors.base);
+  --color-mantle: theme(colors.mantle);
+  --color-crust: theme(colors.crust);
+  --text-color: theme(colors.text-color);
+  --subtext-color: theme(colors.subtext-color);
+  --span-color: theme(colors.redish);
+  --mauve-color:theme(colors.mauve);
+  --sky-color:theme(colors.sky);
+  --teal-color: theme(colors.teal);
+  --shappira-color:theme(colors.shappira);
+  --bluish-color: theme(colors.bluish);
 }
 
-body{
-  /* fonte temporaria */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: theme(colors.base);
-  color: theme(colors.text-color);
+
+@layer body{
+  body{
+    /* fonte temporaria */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--colorBase);
+    color: var(--text-color);
+  }
 }
 
 main{
@@ -21,24 +35,76 @@ main{
   padding: 32px;
 }
 
-h3, h4, h5, h6{
-  @apply font-semibold
+h3{
+  @apply text-lg font-medium mb-0.5;
+}
+
+h4,h5,h6{
+  @apply text-base font-medium mb-0.5;
+  color:var(--text-color)
 }
 
 h1{
-  display: inline-block;
-  @apply text-2xl font-extrabold mb-2
+  @apply text-3xl font-extrabold mb-4;
+  border-bottom: 2px solid var(--span-color);
+}
+
+.text-test h1::before{
+  @apply text-xs font-semibold;
+  content: "H1";
+  margin: 0 3px 0px 0px;
+  color: var(--span-color);
 }
 
 h2{
-  @apply text-xl font-bold
+  @apply text-2xl font-bold mb-3;
+}
+
+p{
+  @apply text-base mb-2;
+  color: var(--text-color);
 }
 
 span{
-  color: theme(colors.redish);
+  color: var(--span-color)
 }
 
 .subtext{
-  color: theme(colors.subtext-color);
-  @apply text-sm
+  @apply text-sm;
+  color: var(--subtext-color);
+}
+
+.text-test{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-test h2::before{
+  @apply text-xs font-semibold;
+  content: "H2";
+  margin: 0 3px 0px 0px;
+  color: var(--mauve-color);
+}
+
+.text-test h2{
+  border-bottom: 2px solid var(--mauve-color);
+}
+
+.text-test h2::before{
+  @apply text-xs font-semibold;
+  content: "H2";
+  margin: 0 3px 0px 0px;
+  color: var(--mauve-color);
+}
+
+.text-test h3::before{
+  @apply text-xs font-semibold;
+  content: "H3";
+  margin: 0 3px 0px 0px;
+  color: var(--bluish-color);
+}
+
+.border-bottom{
+  border-bottom: 2px solid var(--color-mantle);
 }

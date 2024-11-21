@@ -2,18 +2,21 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './css/index.css'
-import App from './App.jsx'
+import MonsterDetail from './pages/MonsterDetail'
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element: <App/>
+    path:'/monster/:id',
+    element: <MonsterDetail/>
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <main>
+    <aside>
+        <h2>menu temporario</h2>
+    </aside>
     <RouterProvider router={router} />
     </main>
   </StrictMode>,

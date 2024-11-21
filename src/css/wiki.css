@@ -1,0 +1,46 @@
+.infocard{
+    @apply bg-mantle backdrop-blur-0 flex flex-col;
+    width: fit-content;
+    height: min-content;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* shitcode yippe */
+.infocard h1,
+.infocard h2,
+.infocard h3,
+.infocard h4,
+.infocard h5,
+.infocard h6,
+.infocard p,
+.infocard li {
+    margin: 0px;
+}
+
+.infocard h4, .infocard h3{
+    @apply text-base text-text-color;
+}
+
+.infocard p{
+    @apply text-sm font-semibold;
+}
+
+.atributes{
+    @apply flex flex-row gap-2 my-1;
+}
+
+.atributes p{
+    @apply font-medium
+}
+
+.text-actions{
+    @apply mb-4;
+    border-bottom: 3px solid var(--color-mantle);
+}
+
+.thumbnail{
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
